@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class=form>
+        <div class="form-group"></div>
+        <div>
+            <label>FirstName</label>
+        </div>
+        <div>
+            <input></input>
+        </div>
+        <div>
+            <label>LastName</label>
+        </div>
+        <div>
+            <input></input>
+        </div>
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            <input></input>
+        </div>
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            <input></input>
+        </div>
+
+        
+    </form>
+        <button onclick="foo()">submit</button>
+    
+    <script>
+        var form=document.createElement('form');
+        form.setAttribute('class','form');
+
+        var formgroup=document.createElement('div');
+        formgroup.setAttribute('class','form');
+
+        var lab1=document.createElement('div');
+        var l1=createelement('label','FirstName');
+        var inp1=document.createElement('div');
+        var i1=createelement('input','FirstName');
+
+        var lab2=document.createElement('div');
+        var l2=createelement('label','LastName');
+        var inp2=document.createElement('div');
+        var i2=createelement('input','LastName');
+
+        var lab3=document.createElement('div');
+        var l3=createelement('label','Email');
+        var inp3=document.createElement('div');
+        var i3=createelement('input','Email');
+
+        var lab4=document.createElement('div');
+        var l4=createelement('label','Password');
+        var inp4=document.createElement('div');
+        var i4=createelement('input','password');
+
+         inp1.append(i1);
+         lab1.append(l1);
+
+         inp2.append(i2);
+         lab2.append(l2);
+
+         inp3.append(i3);
+         lab3.append(l3);
+
+         inp4.append(i4);
+         lab4.append(l4);
+         
+         formgroup.append(lab1,inp1,lab2,inp2,lab3,inp3,lab4,inp4);
+         form.append(formgroup);
+
+
+         function createelement(elename,value=""){
+             var element=document.createElement(elename);
+             element.innerHTML=value;
+             return element;
+         }
+  
+         function foo(){
+             let res=document.getElementsByTagName("input");
+             for(let i=0;i<res.length;i++){
+                 console.log(res[i].value)
+             }
+
+         }
+
+
+    </script>
+</body>
+</html>
